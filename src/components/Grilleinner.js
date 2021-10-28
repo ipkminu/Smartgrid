@@ -1,4 +1,5 @@
 import React from "react"
+import IA from "./IA";
 
 export default class Grilleinner extends React.Component {
     constructor(props) {
@@ -46,8 +47,10 @@ export default class Grilleinner extends React.Component {
                 }
             }
             //console.log("libres:" + libres)
-            var choix = libres[Math.floor(Math.random() * libres.length)] //Choix de la machine
-            //console.log("choix machine:" + choix)
+            //var choix = libres[Math.floor(Math.random() * libres.length)] //Choix de la machine
+
+            var choix = (new IA()).choix((new IA()).cp_grille(this.props.data.grille), 2)
+            console.log("choix machine:" + choix)
             for (let i = 0; i < 6; i++) {
                 if (this.props.data.grille[i][choix] === 0) {
                     this.props.data.grille[i][choix] = 3 - this.props.data.joueur.couleur
@@ -85,7 +88,7 @@ export default class Grilleinner extends React.Component {
 
         if (this.smart(joueur)) {
 
-            this.state.messageFin = "Jeu terminé. Le vainqueur est le joueur n°" + joueur;
+            //this.state.messageFin = "Jeu terminé. Le vainqueur est le joueur n°" + joueur;
             this.setState({
                 messageFin: "Jeu terminé. Le vainqueur est le joueur n°" + joueur
             })
@@ -104,7 +107,7 @@ export default class Grilleinner extends React.Component {
         this.props.data.jeu.courant = 0;
         console.log("Jeu terminé, grille pleine");
         this.props.data.jeu.messageFin = "Jeu terminé, grille pleine";
-        document.getElementById("pausebutton").click();
+        document.getElementById("finjeu").click();
         return true;
     }
     smart(joueur) {

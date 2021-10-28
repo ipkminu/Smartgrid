@@ -5,6 +5,7 @@ import Niveaujeu from "../views/Niveaujeu";
 import Grille from "../views/Grille";
 import Aide from '../views/Aide';
 import Cgus from '../views/Cgus';
+import Espace from '../views/Espace'
 import {
     BrowserRouter as Router,
     Switch,
@@ -44,6 +45,9 @@ export default function Routes() {
                         <Cgus />
                     </Route>
 
+                    <Route path="/espace">
+                        <Espace />
+                    </Route>
 
                     <Route path="/">
                         <Home />

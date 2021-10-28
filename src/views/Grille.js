@@ -57,8 +57,8 @@ class Grille extends React.Component {
                         Jeu {/**Pion du joueur et bouton de pause à ajouter */}
                     </div>
                 </div>
-                <div className="controles" >
-                    <div className="sous-titre">
+                <div className="controles row" >
+                    <div className="sous-titre col">
                         <div data-toggle="modal" data-target="#pauseModal">
                             <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="white" className="bi bi-pause-fill" viewBox="0 0 16 16">
                                 <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z" />
@@ -66,13 +66,13 @@ class Grille extends React.Component {
                             {/* Modal à ajouter pour la pause */}
                         </div>
                     </div>
-                    <div className="sous-titre">
-                        <div>Player:</div>
+                    <div className="sous-titre col">
+                        <div>Vous êtes:</div>
                     </div>
-                    <div className="sous-titre">
+                    <div className="sous-titre col">
                         <div>
                             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <circle fill={this.Color(this.state.jeu.courant)} cx="30" cy="30" r="30" />
+                                <circle fill="yellow" cx="30" cy="30" r="30" />
                             </svg>
                         </div>
                     </div>

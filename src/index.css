@@ -98,7 +98,6 @@ code {
 .controles div {
   align-items: center;
   text-align: center;
-  padding: auto;
   width: 100%;
 }
 .controles div div {
@@ -156,8 +155,48 @@ code {
 #pausebutton {
   display: none;
 }
+#finjeu{
+  display:none;
+}
 @media (min-width: 450px) {
   .grille div div {
     height: calc(385.7142px / 6);
   }
+  html,body,#root{
+    min-height: unset;
+
+  }
+  .controles{
+    max-height: 35px;;
+  }
+  .grille{
+    position:absolute;
+    left: 15px;
+    margin-bottom: 20px;;
+  }
 }
+
+
+.match{
+  margin-right: 15px;
+  position: absolute;
+  right: 30px
+}
+
+.player{
+  padding: 10px;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
